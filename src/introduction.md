@@ -45,11 +45,11 @@ In this tutorial, you will learn:
 
 It is recommended to read the "Tutorial" part in order.
 
-These books many runnable code blocks. It is encouraged to run them by clicking the <i class="fas fa-play"></i> button at the top-right of each code block.
+This book has many runnable and editable code blocks. It is encouraged to run them by clicking the play button <i class="fas fa-play"></i> at the top-right of each code block.
 
-For example, there is a runnable example below:
+For example:
 
-```rust
+```rust,editable
 fn main() {
     println!("Hello, world!");
 }
