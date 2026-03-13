@@ -7,7 +7,6 @@ Welcome Rustacean! Let's learn about Rust macros.
 To follow this tutorial, you should have:
 
 - Basic knowledge of Rust (variables, functions, structs, etc.)
-- Familiarity with the Rust compiler (`rustc`)
 - A working Rust project setup (using `cargo`)
 - Understanding of Rust's type system and ownership
 

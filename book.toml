@@ -1,4 +1,9 @@
 [book]
 title = "Rust Macros Tutorial"
 authors = ["Atliac"]
+description = "A comprehensive guide to mastering macros in Rust, from basic concepts to advanced techniques."
 language = "en"
+
+[output.html]
+default-theme = "rust"
+git-repository-url = "https://github.com/atliac/rust-macros-tutorial"
