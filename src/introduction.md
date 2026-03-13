@@ -2,6 +2,17 @@
 
 Welcome Rustacean! Let's learn about Rust macros.
 
+## Prerequisites
+
+To follow this tutorial, you should have:
+
+- Basic knowledge of Rust (variables, functions, structs, etc.)
+- Familiarity with the Rust compiler (`rustc`)
+- A working Rust project setup (using `cargo`)
+- Understanding of Rust's type system and ownership
+
+If you're new to Rust, consider completing the official [Rust Book](https://doc.rust-lang.org/book/) first.
+
 ## What are Macros
 
 Simply put, macros are a metaprogramming language that allows us to write code that generates code.
@@ -33,9 +44,9 @@ In this tutorial, you will learn:
 
 ## How to Use This Book
 
-It is recommended to read the first part ("Tutorial") in order.
+It is recommended to read the "Tutorial" part in order.
 
-These books may contain many runnable code blocks. It is encouraged to run them by clicking the <i class="fas fa-play"></i> button at the top-right of each code block.
+These books many runnable code blocks. It is encouraged to run them by clicking the <i class="fas fa-play"></i> button at the top-right of each code block.
 
 For example, there is a runnable example below:
 
