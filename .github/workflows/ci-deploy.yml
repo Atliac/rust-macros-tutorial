@@ -15,7 +15,7 @@ permissions:
 jobs:
   # --- JOB 1: TEST ---
   test:
-    name: Run Rust Doc Tests
+    name: Run mdbook test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
