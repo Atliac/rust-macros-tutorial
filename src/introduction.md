@@ -43,14 +43,22 @@ In this tutorial, you will learn:
 
 ## How to Use This Book
 
-It is recommended to read the "Tutorial" part in order.
+This tutorial is designed to be interactive and hands-on. Here's how to get the most out of it:
 
-This book has many runnable and editable code blocks. It is encouraged to run them by clicking the play button <i class="fas fa-play"></i> at the top-right of each code block.
+### Reading Order
 
-For example:
+It is recommended to read the "Tutorial" section in order. While you can explore other sections, macros build on concepts progressively, and following the intended sequence will help you understand the material better.
 
-```rust,editable
-fn main() {
-    println!("Hello, world!");
-}
-```
+### Interactive Code Blocks
+
+This book contains many **runnable and editable** Rust code blocks:
+
+- **Runnable**: Click the play button <i class="fas fa-play"></i> at the top-right of any code block to execute it and see the output directly.
+- **Editable**: Edit the code directly in the editor, then click the play button to re-run it with your changes.
+
+
+### Tips for Learning
+
+- Try modifying the examples to understand how macros work
+- Use the <i class="fas fa-play"></i> button to verify your changes compile and behave as expected
+- Don't hesitate to break things - the tutorial is designed for experimentation
