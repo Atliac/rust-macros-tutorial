@@ -21,7 +21,7 @@ This tutorial is designed for Rust developers who want to deepen their understan
 
 ## 🌐 Live Documentation
 
-Visit the online version at [https://rust-macros-tutorial.atliac.com/](https://rust-macros-tutorial.atliac.com/)
+Visit the online version at [https://books.atliac.com/rust-macros-tutorial/](https://books.atliac.com/rust-macros-tutorial/)
 
 ## 🤝 Contributing
 
