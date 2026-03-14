@@ -7,6 +7,7 @@ language = "en"
 [output.html]
 default-theme = "rust"
 git-repository-url = "https://github.com/atliac/rust-macros-tutorial"
+site-url = "/rust-macros-tutorial"
 
 [output.html.playground]
 editable = true
