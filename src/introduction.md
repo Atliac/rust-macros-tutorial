@@ -54,7 +54,7 @@ It is recommended to read the "Tutorial" section in order. While you can explore
 This book contains many **runnable and editable** Rust code blocks:
 
 - **Runnable**: Click the play button <i class="fas fa-play"></i> at the top-right of any code block to execute it and see the output directly.
-- **Editable**: Edit the code directly in the editor, then click the play button to re-run it with your changes.
+- **Editable**: Edit the code directly in the editor, then click the play button to re-run the updated code with your changes.
 
 
 ### Tips for Learning
