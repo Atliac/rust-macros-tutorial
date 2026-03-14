@@ -4,11 +4,11 @@ Welcome Rustacean! Let's learn about Rust macros.
 
 ## Prerequisites
 
-To follow this tutorial, you should have:
+To get the most out of this tutorial, we recommend having:
 
-- Basic knowledge of Rust (variables, functions, structs, etc.)
-- A working Rust project setup (using `cargo`)
-- Understanding of Rust's type system and ownership
+- **Familiarity with basic Rust syntax** (variables, functions, and structs).
+- **A functional Rust development environment** (with `cargo` installed).
+- **A solid understanding** of Rust's core concepts, such as the type system and ownership.
 
 If you're new to Rust, consider completing the official [Rust Book](https://doc.rust-lang.org/book/) first.
 
@@ -36,7 +36,6 @@ Rust has two main kinds of macros:
 ## What You'll Learn
 
 In this tutorial, you will learn:
-- How macros work under the hood
 - How to write your own macros
 - Best practices for macro safety and maintainability
 - Common macro patterns used in the Rust ecosystem
@@ -47,7 +46,7 @@ This tutorial is designed to be interactive and hands-on. Here's how to get the 
 
 ### Reading Order
 
-It is recommended to read the "Tutorial" section in order. While you can explore other sections, macros build on concepts progressively, and following the intended sequence will help you understand the material better.
+For the best learning experience, we recommend reading this tutorial in order. While you are free to explore different sections, macros build on concepts progressively; following the intended sequence will help you understand the material more effectively.
 
 ### Interactive Code Blocks
 
