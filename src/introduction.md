@@ -4,11 +4,11 @@ Welcome Rustacean! Let's learn about Rust macros.
 
 ## Prerequisites
 
-To follow this tutorial, you should have:
+To get the most out of this tutorial, we recommend having:
 
-- Basic knowledge of Rust (variables, functions, structs, etc.)
-- A working Rust project setup (using `cargo`)
-- Understanding of Rust's type system and ownership
+- **Familiarity with basic Rust syntax** (variables, functions, and structs).
+- **A functional Rust development environment** (with `cargo` installed).
+- **A solid understanding** of Rust's core concepts, such as the type system and ownership.
 
 If you're new to Rust, consider completing the official [Rust Book](https://doc.rust-lang.org/book/) first.
 
@@ -36,21 +36,28 @@ Rust has two main kinds of macros:
 ## What You'll Learn
 
 In this tutorial, you will learn:
-- How macros work under the hood
 - How to write your own macros
 - Best practices for macro safety and maintainability
 - Common macro patterns used in the Rust ecosystem
 
 ## How to Use This Book
 
-It is recommended to read the "Tutorial" part in order.
+This tutorial is designed to be interactive and hands-on. Here's how to get the most out of it:
 
-This book has many runnable and editable code blocks. It is encouraged to run them by clicking the play button <i class="fas fa-play"></i> at the top-right of each code block.
+### Reading Order
 
-For example:
+For the best learning experience, we recommend reading this tutorial in order. While you are free to explore different sections, macros build on concepts progressively; following the intended sequence will help you understand the material more effectively.
 
-```rust,editable
-fn main() {
-    println!("Hello, world!");
-}
-```
+### Interactive Code Blocks
+
+This book contains many **runnable and editable** Rust code blocks:
+
+- **Runnable**: Click the play button <i class="fas fa-play"></i> at the top-right of any code block to execute it and see the output directly.
+- **Editable**: Edit the code directly in the editor, then click the play button to re-run the updated code with your changes.
+
+
+### Tips for Learning
+
+- Try modifying the examples to understand how macros work
+- Use the <i class="fas fa-play"></i> button to verify your changes compile and behave as expected
+- Don't hesitate to break things - the tutorial is designed for experimentation
