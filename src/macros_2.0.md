@@ -19,4 +19,4 @@ Macros 2.0 aims to address these limitations by providing a more powerful and fl
 > We will get it back when it is implemented.
 
 > [!TIP]
-> We actually don't need neither macros 1.0 nor macros 2.0, if we can use procedural macros.
+> We actually don't need macros 1.0 or macros 2.0, if we can use procedural macros.
