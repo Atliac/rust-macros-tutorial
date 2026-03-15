@@ -35,10 +35,10 @@ Rust has two main kinds of macros:
 
 ## What You'll Learn
 
-In this tutorial, you will learn:
+Here's what you'll learn in this tutorial:
 - How to write your own macros
 - Best practices for macro safety and maintainability
-- Common macro patterns used in the Rust ecosystem
+- Common macro patterns in the Rust ecosystem
 
 ## How to Use This Book
 

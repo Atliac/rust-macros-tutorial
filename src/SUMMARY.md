@@ -4,5 +4,8 @@
 
 - [Macros 1.0: macro_rules!](./macros_1.0.md)
   - [Metavariables](./macros_1.0/metavariables.md)
-- [Macros 2.0]()
+  - [Repetitions](./macros_1.0/repetitions.md)
+  - [Scoping](./macros_1.0/scoping.md)
+  - [Hygiene](./macros_1.0/hygiene.md)
+- [Macros 2.0](./macros_2.0.md)
 - [Procedural macros](./procedural_macros.md)
