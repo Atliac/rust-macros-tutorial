@@ -1,9 +1,28 @@
-# proc-macro2, syn, and quote
+# The Procedural Macro Ecosystem: proc-macro2, syn, and quote
 
-Procedural macros handle the `TokenStream` from the `proc-macro` crate. This is a compiler-provided crate that can only be used within a procedural macro crate.
+Procedural macros function by manipulating the `proc_macro::TokenStream` type. However, the standard `proc_macro` crate is a compiler built-in and is restricted to crates explicitly defined as procedural macro libraries. To bypass these limitations and streamline development, the Rust ecosystem relies on three foundational crates:
 
-The `proc-macro2` crate, which can be used in any type of crate, provides a similar API to `proc-macro::TokenStream`. It allows for easy conversion to and from `proc-macro::TokenStream`.
+- **`proc-macro2`**: This crate offers an API almost identical to `proc_macro` but can be used in any environment (including tests and binaries). It acts as a bridge, facilitating seamless conversion to and from the compiler-native `proc_macro::TokenStream`.
+- **`syn`**: A robust parsing library that transforms a `TokenStream` into a complete syntax tree. This allows you to process and manipulate Rust code programmatically, which is significantly more intuitive than working with raw tokens.
+- **`quote`**: As the counterpart to `syn`, this crate enables you to convert Rust code templates back into a `proc_macro2::TokenStream`. Its support for "quasi-quoting" allows you to interpolate variables directly into the generated source code.
 
-`syn` is used to parse a `proc-macro::TokenStream` or `proc-macro2::TokenStream` into an Abstract Syntax Tree (AST), making it much easier to process.
+## A First Look at Syntax Trees
 
-`quote` converts Rust code back into a `proc-macro2::TokenStream`, allowing you to interpolate variables from your AST directly into the code.
+```rust,editable
+use quote::quote;
+
+fn main() {
+    let token_stream = quote! {
+        fn main(){
+            println!("Hello, world!");
+        }
+    };
+
+    let syntax_tree: syn::File = syn::parse2(token_stream).unwrap();
+
+    println!("{:#?}", syntax_tree);
+}
+```
+
+> [!TIP]
+> While the output may seem overwhelming at first, remember that this is only a demonstration. In practice, we rarely need to work with syntax trees at the `syn::File` level.

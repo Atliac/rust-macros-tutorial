@@ -31,10 +31,7 @@ fn main() {
     for (i, tt) in token_stream.clone().into_iter().enumerate() {
         println!("token {}:", i);
         println!("source code: {}", tt);
-        println!("AST: {:?}\n", tt);
+        println!("TokenTree: {:?}\n", tt);
     }
 }
 ```
-
-> [!TIP]
-> Think of an **AST (Abstract Syntax Tree)** as a "map" of your code. It organizes the raw text into a tree structure, making it much easier to understand how different parts (like functions, variables, and loops) are related to each other.
