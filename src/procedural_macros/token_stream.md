@@ -12,7 +12,7 @@ A `TokenStream` is roughly equivalent to a `Vec<TokenTree>`. A `TokenTree` is ve
 use quote::quote;
 
 fn main() {
-    // Mimic the compiler: convert Rust code to a TokenStream.
+    // Convert Rust code to a TokenStream.
     let token_stream = quote! {
         // Comments and whitespace are ignored.
 

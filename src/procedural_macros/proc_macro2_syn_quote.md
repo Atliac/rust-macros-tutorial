@@ -4,6 +4,6 @@ Procedural macros handle the `TokenStream` from the `proc-macro` crate. This is 
 
 The `proc-macro2` crate, which can be used in any type of crate, provides a similar API to `proc-macro::TokenStream`. It allows for easy conversion to and from `proc-macro::TokenStream`.
 
-`syn` is used to parse a `proc-macro` or `proc-macro2` `TokenStream` into an Abstract Syntax Tree (AST), making it much easier to process.
+`syn` is used to parse a `proc-macro::TokenStream` or `proc-macro2::TokenStream` into an Abstract Syntax Tree (AST), making it much easier to process.
 
 `quote` converts Rust code back into a `proc-macro2::TokenStream`, allowing you to interpolate variables from your AST directly into the code.
