@@ -4,7 +4,7 @@ A comprehensive guide to mastering macros in Rust, from basic concepts to advanc
 
 ## 📖 Overview
 
-This tutorial is designed for Rust developers who want to deepen their understanding of macros, one of the most powerful—and often misunderstood—features of the language. Whether you're struggling with `macro_rules!`, exploring declarative macros, or diving into custom derive implementations, this guide will walk you through every step.
+Welcome to the Rust Macros Tutorial! This guide is a hands-on, interactive way to learn about Rust's powerful metaprogramming system. You will learn about declarative macros (`macro_rules!`) and all three types of procedural macros: Derive, Attribute, and Function-like. Through editable code examples, you'll discover how to use macros for code generation and domain-specific abstractions, while learning best practices for safety and maintainability.
 
 ## 💻 Prerequisites
 
