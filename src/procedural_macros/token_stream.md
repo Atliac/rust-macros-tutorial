@@ -8,7 +8,7 @@ A `TokenStream` is roughly equivalent to a `Vec<TokenTree>`. A `TokenTree` is ve
 
 ## See TokenStream in Action
 
-```rust,editable
+```rust,editable,compile_fail
 use quote::quote;
 
 fn main() {

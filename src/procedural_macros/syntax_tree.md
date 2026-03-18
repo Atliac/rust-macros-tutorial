@@ -8,7 +8,7 @@ A syntax tree is made up of syntax tree nodes. A syntax tree node can be a token
 
 `syn::File` is a syntax tree (root) node that represents a full source file.
 
-```rust,editable
+```rust,editable,compile_fail
 use quote::quote;
 
 fn main() {
@@ -37,7 +37,7 @@ We will learn how to define our own syntax tree nodes. But first, let's explore 
 
 [Token!](https://docs.rs/syn/latest/syn/macro.Token.html) is a type macro that expands to the Rust type representing a specific token.
 
-```rust,editable
+```rust,editable,compile_fail
 use syn::*;
 
 fn main() {
@@ -63,7 +63,7 @@ fn main() {
 
 ### custom_keyword!
 
-```rust,editable
+```rust,editable,compile_fail
 use syn::*;
 
 // We define custom keywords in a `kw` or `keywords` module by convention.
@@ -78,7 +78,7 @@ fn main() {
 
 ## Parsing a Syntax Tree Node
 
-```rust,editable
+```rust,editable,compile_fail
 use syn::*;
 
 fn main() {
@@ -98,7 +98,7 @@ There are two ways to parse a custom syntax tree node:
 
 ### Using a function or closure
 
-```rust,editable
+```rust,editable,compile_fail
 use quote::*;
 use syn::{
     parse::{ParseStream, Parser},

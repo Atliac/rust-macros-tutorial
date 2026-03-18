@@ -11,7 +11,7 @@ The `quote!` macro is a procedural macro that takes a template of Rust code and 
 |macro_rules!|`$var`|metavariable|`$(<...>)[delimiter]<*\|?\|+>`|
 |quote!|`#var`|any type implementing `ToTokens`|`#(<...>)[delimiter]*`|
 
-```rust,editable
+```rust,editable,compile_fail
 fn main() {
     let f: syn::ItemFn = syn::parse_quote!(
         fn foo(x: i32) -> i32 {

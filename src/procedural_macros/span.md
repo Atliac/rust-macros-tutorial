@@ -6,7 +6,7 @@ To provide precise error locations, we use `Span`s. A `Span` is an opaque value 
 
 ## Example with Coarse-grained Spans
 
-```rust
+```rust,compile_fail
 # use syn::{
 #     parse::{Parse, ParseStream},
 #     *,
@@ -37,7 +37,7 @@ To provide precise error locations, we use `Span`s. A `Span` is an opaque value 
 
 ## Example with Precise Spans
 
-```rust,editable
+```rust,editable,compile_fail
 use std::str::FromStr;
 
 use proc_macro2::TokenStream;
