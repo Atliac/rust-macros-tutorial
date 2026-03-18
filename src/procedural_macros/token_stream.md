@@ -35,3 +35,6 @@ fn main() {
     }
 }
 ```
+
+> [!TIP]
+> We'll talk about `quote!` in detail in the [quote](./quote.md) chapter.
