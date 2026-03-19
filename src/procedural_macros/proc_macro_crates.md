@@ -59,7 +59,7 @@ fn main() {
 The `input` contains the tokens enclosed by whatever delimiters (parentheses `()`, brackets `[]`, or braces `{}`) are used when calling the macro. In the example above, the input is `world`. Upon expansion, the call `hello_macro!(world)` is replaced entirely by the macro's `output`.
 
 ### The `parse_macro_input!` Macro
-The `parse_macro_input!` macro parses the input `TokenStream` into a specific `syn` syntax tree node. If parsing fails, it automatically generates a high-quality compile-time error.
+The `parse_macro_input!` macro parses the input `TokenStream` into a specific `syn` syntax tree node (including custom syntax tree nodes). If parsing fails, it automatically generates a high-quality compile-time error.
 
 The basic syntax is `parse_macro_input!(<TokenStream> as <Type>)`. This convenience macro is specifically designed for use within `proc-macro` crates.
 

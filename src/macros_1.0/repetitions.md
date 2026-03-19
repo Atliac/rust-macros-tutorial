@@ -1,6 +1,6 @@
 # Repetitions
 
-We use `$(<metavariable>)[delimiter]<*|?|+>` to specify metavariable repetition in both the pattern (matcher) and the expansion (transcriber).
+We use `$(<matcher | transcriber>)[delimiter]<*|?|+>` to specify metavariable repetition in both the pattern (matcher) and the expansion (transcriber).
 
 - `*`: Zero or more times
 - `?`: Zero or one time

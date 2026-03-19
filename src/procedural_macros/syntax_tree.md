@@ -2,7 +2,7 @@
 
 A syntax tree is a hierarchical representation of source code. It transforms a flat, linear stream of tokens into a structured format that is easy to process and manipulate. The `syn` crate provides a complete syntax tree that can represent any valid Rust source code. We can use `syn` to define our own syntax trees; for example, we can define a syntax tree for HTML, CSS, or any other DSL.
 
-A syntax tree is made up of syntax tree nodes. A syntax tree node can be a token, a group of tokens, or a value of a type that implements the `syn::parse::Parse` trait.
+A syntax tree is made up of syntax tree nodes. A syntax tree node can be a token, a group of tokens, or any type that implements the `syn::parse::Parse` trait.
 
 ## See a Syntax Tree Node in Action
 
