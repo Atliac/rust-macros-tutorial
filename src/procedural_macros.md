@@ -11,7 +11,7 @@ These constraints can make testing and debugging procedural macros challenging, 
 
 Fortunately, [David Tolnay](https://github.com/dtolnay), a prominent figure in the Rust community, has created several essential crates that simplify this workflow. In this chapter, we will focus on three of them: [`syn`](https://github.com/dtolnay/syn), [`quote`](https://github.com/dtolnay/quote), and [`proc-macro2`](https://github.com/dtolnay/proc-macro2). These are the standard tools used in nearly all professional Rust projects for building procedural macros.
 
-By using these crates, we can write our macro logic in a standard Rust crate where it can be easily tested and debugged. Once the logic is verified, we can then integrate it into a formal `proc-macro` crate.
+By using these crates, we can write our macro logic as standard, testable Rust code. This decouples the core logic from the restricted environment of a `proc-macro` crate, making it much easier to verify and debug using standard tools.
 
 Instead of jumping straight into the complexities of procedural macro crates, we will begin our journey by learning how to write "code that generates code" within a standard Rust environment.
 
