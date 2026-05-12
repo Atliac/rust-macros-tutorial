@@ -43,21 +43,22 @@ use syn::*;
 fn main() {
     // Parse the `pub` keyword
     let input = quote::quote! {pub};
-    let _token: Token![pub] = parse2(input).unwrap();
+    let t: Token![pub] = parse2(input).unwrap();
+    println!("{t:?}");
     // Or use parse_quote!
-    let _token: Token![pub] = parse_quote! {pub};
-
+    let t: Token![pub] = parse_quote! {pub};
+    println!("{t:?}");
     // Parse the `struct` keyword
-    let _token: Token![struct] = parse_quote! {struct};
-
+    let t: Token![struct] = parse_quote! {struct};
+    println!("{t:?}");
     // Parse `+=`
-    let _token: Token![+=] = parse_quote! {+=};
-
+    let t: Token![+=] = parse_quote! {+=};
+    println!("{t:?}");
     // Parse `::`
-    let _token: Token![::] = parse_quote! {::};
-
+    let t: Token![::] = parse_quote! {::};
+    println!("{t:?}");
     // Error: `pub fn main() {}` is not a single token
-    // let _token: Token![pub] = parse_quote! {pub fn main() {}};
+    // let t: Token![pub] = parse_quote! {pub fn main() {}};
 }
 ```
 
@@ -72,7 +73,8 @@ mod kw{
 }
 
 fn main() {
-    let _token: kw::div = parse_quote! {div};
+    let t: kw::div = parse_quote! {div};
+    println!("{t:?}");
 }
 ```
 
@@ -82,11 +84,15 @@ fn main() {
 use syn::*;
 
 fn main() {
-    let _node: ItemFn = parse_quote! {fn main() {println!("Hello, world!")}};
-    let _node: ItemStruct = parse_quote! {struct MyStruct {field: i32}};
+    let node: ItemFn = parse_quote! {fn main() {println!("Hello, world!")}};
+    println!("{node:#?}");
+    let node: ItemStruct = parse_quote! {struct MyStruct {field: i32}};
+    println!("{node:#?}");
     // `syn::DeriveInput` is a syntax tree node that represents any valid input to a derive macro.
-    let _node: DeriveInput = parse_quote! {#[derive(Debug)] struct MyStruct {field: i32}};
+    let node: DeriveInput = parse_quote! {#[derive(Debug)] struct MyStruct {field: i32}};
+    println!("{node:#?}");
 }
+
 ```
 
 ## Parsing a Custom Syntax Tree Node
@@ -104,9 +110,14 @@ use syn::{
     parse::{ParseStream, Parser},
     *,
 };
+// We define custom keywords in a `kw` or `keywords` module by convention.
+mod kw {
+    syn::custom_keyword!(div);
+}
 
 fn main() {
     let input = quote! {
+        // Tip: try modifying it to an invalid div element and see the result.
         <div>"Hello World"</div>
     };
     // parse::Parser::parse2(|input: ParseStream| -> Result<()> { todo!() }, input).unwrap();
@@ -118,23 +129,26 @@ fn main() {
         // `<`
         input.parse::<Token![<]>()?;
         // `div`
-        input.parse::<Ident>()?;
+        input.parse::<kw::div>()?;
         // `>`
         input.parse::<Token![>]>()?;
         // `"Hello World"`
-        input.parse::<LitStr>()?;
+        let str = input.parse::<LitStr>()?;
         // `<`
         input.parse::<Token![<]>()?;
         // `/`
         input.parse::<Token![/]>()?;
         // `div`
-        input.parse::<Ident>()?;
+        input.parse::<kw::div>()?;
         // `>`
         input.parse::<Token![>]>()?;
+        println!("{str:?}");
+        println!("Done!");
         Ok(())
     };
     parser.parse2(input).unwrap();
 }
+
 ```
 
 ### Defining a custom syntax tree node type by implementing the `syn::parse::Parse` trait
